@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>View Stored Data</title>
+</head>
+<body>
+
+  <div class="view-data-container">
+    <h2>View Stored Data</h2>
+    <div id="userDataDisplay"></div>
+    <button onclick="displayStoredData()">Show Stored Data</button>
+  </div>
+
+  <script>
+    function displayStoredData() {
+      // Retrieve user data from local storage
+      var storedData = localStorage.getItem('userData');
+
+      // Display the user data
+      var displayElement = document.getElementById('userDataDisplay');
+      displayElement.innerHTML = "<strong>Stored Data:</strong><br>" + storedData;
+    }
+  </script>
+
+</body>
+</html>
